@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Giveaway - Limited Offer!</title>
+    <meta name="description" content="Get access to exclusive deals, giveaways, and premium offers. Don't miss out!">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 20px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .countdown {
+            font-size: 22px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Exclusive Giveaway! 🎉</h1>
+        <p>Claim your special reward now. Limited-time offer!</p>
+        <p>Redirecting in <span class="countdown">7</span> seconds...</p>
+        <a class="btn" id="redirect-btn">Claim Now</a>
+    </div>
+
+    <script>
+        var links = [
+            "https://www.effectiveratecpm.com/wbthg10f6c?key=92dcac955d7ff90f8d48798d85856c4e",
+            "https://www.effectiveratecpm.com/bhr5gm13p?key=6e27c499993706ab5b653aeae8fb141a",
+            "https://www.effectiveratecpm.com/tifqwaipt?key=2c606405f70622608430cf79acc7737f"
+        ];
+        var randomLink = links[Math.floor(Math.random() * links.length)];
+
+        // Countdown Timer
+        var count = 7;
+        var countdownElement = document.querySelector(".countdown");
+        var interval = setInterval(function() {
+            count--;
+            countdownElement.innerText = count;
+            if (count <= 0) {
+                clearInterval(interval);
+                window.location.href = randomLink;
+            }
+        }, 1000);
+
+        // Button Click Redirect
+        document.getElementById("redirect-btn").addEventListener("click", function() {
+            window.location.href = randomLink;
+        });
+    </script>
+</body>
+</html>
